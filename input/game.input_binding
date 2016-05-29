@@ -1,0 +1,24 @@
+key_trigger {
+  input: KEY_W
+  action: "forward"
+}
+key_trigger {
+  input: KEY_D
+  action: "strafe_right"
+}
+key_trigger {
+  input: KEY_A
+  action: "strafe_left"
+}
+key_trigger {
+  input: KEY_S
+  action: "backwards"
+}
+key_trigger {
+  input: KEY_Q
+  action: "turn_left"
+}
+key_trigger {
+  input: KEY_E
+  action: "turn_right"
+}
