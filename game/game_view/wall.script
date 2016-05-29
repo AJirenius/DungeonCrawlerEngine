@@ -1,0 +1,32 @@
+go.property("flip_side",0)
+go.property("hide_front",0)
+
+function init(self)
+    if self.flip_side == 1 then sprite.set_hflip("#side", true) end
+    if self.hide_front == 1 then msg.post("#front", "disable") end
+end
+
+function final(self)
+    -- Add finalization code here
+    -- Remove this function if not needed
+end
+
+function update(self, dt)
+    -- Add update code here
+    -- Remove this function if not needed
+end
+
+function on_message(self, message_id, message, sender)
+    -- Add message-handling code here
+    -- Remove this function if not needed
+end
+
+function on_input(self, action_id, action)
+    -- Add input-handling code here
+    -- Remove this function if not needed
+end
+
+function on_reload(self)
+    -- Add reload-handling code here
+    -- Remove this function if not needed
+end

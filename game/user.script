@@ -1,0 +1,25 @@
+local grid = require "game.grid"
+local const = require "game.const"
+
+function init(self)
+	
+    
+end
+
+
+function update(self, dt)
+    -- Add update code here
+    -- Remove this function if not needed
+end
+
+function on_message(self, message_id, message, sender)
+    if message_id == hash("start_game") then
+    	self.pos = grid.grid[2][2]
+    	self.rot = const.NORTH
+    end
+end
+
+function on_input(self, action_id, action)
+    -- Add input-handling code here
+    -- Remove this function if not needed
+end
