@@ -1,32 +1,31 @@
+local step_counter = require "game.step_counter"
 go.property("flip_side",0)
-go.property("hide_front",0)
+go.property("has_front",1)
+go.property("side_1", hash("none"))
+go.property("side_2", hash("none"))
 
 function init(self)
     if self.flip_side == 1 then sprite.set_hflip("#side", true) end
-    if self.hide_front == 1 then msg.post("#front", "disable") end
-end
-
-function final(self)
-    -- Add finalization code here
-    -- Remove this function if not needed
-end
-
-function update(self, dt)
-    -- Add update code here
-    -- Remove this function if not needed
+	if self.side_1 ~= hash("none") and self.side_2 ~= hash("none") then 
+		self.sides = { self.side_1, self.side_2 }
+	end
 end
 
 function on_message(self, message_id, message, sender)
-    -- Add message-handling code here
-    -- Remove this function if not needed
-end
-
-function on_input(self, action_id, action)
-    -- Add input-handling code here
-    -- Remove this function if not needed
-end
-
-function on_reload(self)
-    -- Add reload-handling code here
-    -- Remove this function if not needed
+	pprint(message_id)
+    if message_id == hash("update") then
+    	msg.post(".", "enable")
+    	if self.sides then
+    		msg.post("#side", "play_animation", {id = self.sides[step_counter.count%2+1]})
+		end
+		if self.has_front == 1 then
+			if message.index%2 == 0 then
+				sprite.set_hflip("#front", true)
+			else
+				sprite.set_hflip("#front", false)
+			end
+		end
+    elseif message_id == hash("disable") then
+    
+    end
 end

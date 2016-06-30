@@ -23,7 +23,7 @@ embedded_components {
   type: "sprite"
   data: "tile_set: \"/assets/ingame.atlas\"\n"
   "default_animation: \"2_front\"\n"
-  "material: \"/builtins/materials/sprite.material\"\n"
+  "material: \"/render/sprite.material\"\n"
   "blend_mode: BLEND_MODE_ALPHA\n"
   ""
   position {
@@ -43,7 +43,7 @@ embedded_components {
   type: "sprite"
   data: "tile_set: \"/assets/ingame.atlas\"\n"
   "default_animation: \"2_2_side_1\"\n"
-  "material: \"/builtins/materials/sprite.material\"\n"
+  "material: \"/render/sprite.material\"\n"
   "blend_mode: BLEND_MODE_ALPHA\n"
   ""
   position {

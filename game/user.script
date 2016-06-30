@@ -1,25 +1,62 @@
 local grid = require "game.grid"
 local const = require "game.const"
+local step_counter = require "game.step_counter"
+
+local dirs = { {0,1},{1,0},{0,-1},{-1,0}, }
+local move_directions = {} 
+move_directions[hash("forward")] =  0
+move_directions[hash("strafe_right")] = 1
+move_directions[hash("backwards")] = 2
+move_directions[hash("strafe_left")] = 3
+
 
 function init(self)
-	
+	msg.post(".","acquire_input_focus")
     
 end
 
-
-function update(self, dt)
-    -- Add update code here
-    -- Remove this function if not needed
+local function update_user_view(self)
+	if self.current_tile then grid.set_minimap(self.current_tile, 0) end
+	local slots = grid.get_view(self.pos, self.rot)
+    msg.post("/game_view/view_manager",hash("update_view"), {slots = slots}) 
+    self.current_tile = self.pos
+    grid.set_minimap(self.current_tile, 1+self.rot)
+    
 end
 
 function on_message(self, message_id, message, sender)
     if message_id == hash("start_game") then
-    	self.pos = grid.grid[2][2]
+    	self.pos = grid.grid[2][2].grid_pos
     	self.rot = const.NORTH
     end
+    update_user_view(self)  
 end
 
 function on_input(self, action_id, action)
-    -- Add input-handling code here
-    -- Remove this function if not needed
+    if action.pressed == true then
+    	if action_id == hash("forward") 
+    	or action_id == hash("strafe_right") 
+    	or action_id == hash("strafe_left") 
+    	or action_id == hash("backwards") then
+    		local val = dirs[(move_directions[action_id]+self.rot-1)%4+1]
+    		 
+    		local new_pos = self.pos + vmath.vector3(val[1],val[2],0)
+    		if grid.is_walkable(new_pos) ==	true then 
+    			self.pos = new_pos 
+    			update_user_view(self)  
+    		end
+    		step_counter.add_step()
+    	elseif action_id == hash("turn_left") then
+    		self.rot = self.rot - 1
+    		if self.rot < 1 then self.rot = 4 end
+    		update_user_view(self)  
+    		step_counter.add_step()
+    	elseif action_id == hash("turn_right") then
+    		self.rot = self.rot % 4 + 1
+    		update_user_view(self)  
+    		step_counter.add_step()
+    	end
+    end
+    	
+    
 end

@@ -12,17 +12,32 @@ components {
     z: 0.0
     w: 1.0
   }
+  properties {
+    id: "has_front"
+    value: "0.0"
+    type: PROPERTY_TYPE_NUMBER
+  }
+  properties {
+    id: "side_1"
+    value: "3_1_side_2"
+    type: PROPERTY_TYPE_HASH
+  }
+  properties {
+    id: "side_2"
+    value: "3_1_side_1"
+    type: PROPERTY_TYPE_HASH
+  }
 }
 embedded_components {
   id: "side"
   type: "sprite"
   data: "tile_set: \"/assets/ingame.atlas\"\n"
   "default_animation: \"3_1_side_1\"\n"
-  "material: \"/builtins/materials/sprite.material\"\n"
+  "material: \"/render/sprite.material\"\n"
   "blend_mode: BLEND_MODE_ALPHA\n"
   ""
   position {
-    x: 198.5
+    x: 230.0
     y: 0.0
     z: 0.0
   }

@@ -27,7 +27,6 @@ local function position_all(self)
 		for ii = 1, 3 do
 			if i ~= 5 or ii ~= 2 then
 				local obj = go.get_id("R"..tostring(i).."_"..tostring(ii))
-				print("R"..tostring(i).."_"..tostring(ii))
 				table.insert(row, obj)
 				local pos = go.get_position(obj)
 				pos.x = front_widths[i]*(ii-2)
@@ -43,27 +42,26 @@ function init(self)
    position_all(self)
 end
 
-function final(self)
-    -- Add finalization code here
-    -- Remove this function if not needed
-end
-
-function update(self, dt)
-    -- Add update code here
-    -- Remove this function if not needed
+local function update_view(self, slots)
+	local count = 0
+	for i,row in ipairs(self.rows) do
+		for ii,obj in ipairs(row) do
+			count = count + 1
+			local slot = slots[count]
+			if slot.is_wall == true then
+				local index = slot.grid_pos.x+slot.grid_pos.y
+				--msg.post(obj,"enable")
+				msg.post(obj,"update",{ index = index } )
+			else
+				msg.post(obj,"disable")
+			end
+		end
+	end
+	msg.post("/game_view/Background","update")
 end
 
 function on_message(self, message_id, message, sender)
-    -- Add message-handling code here
-    -- Remove this function if not needed
-end
-
-function on_input(self, action_id, action)
-    -- Add input-handling code here
-    -- Remove this function if not needed
-end
-
-function on_reload(self)
-    -- Add reload-handling code here
-    -- Remove this function if not needed
+    if message_id == hash("update_view") then
+    	update_view(self, message.slots)
+    end
 end

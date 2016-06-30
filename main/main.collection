@@ -3,8 +3,8 @@ collection_instances {
   id: "game_view"
   collection: "/game/game_view/game_view.collection"
   position {
-    x: 13.194641
-    y: 14.3129425
+    x: 0.0
+    y: 0.0
     z: 0.0
   }
   rotation {
@@ -39,9 +39,9 @@ embedded_instances {
   "}\n"
   ""
   position {
-    x: -1211.5209
-    y: -87.11147
-    z: 0.0
+    x: -347.71478
+    y: -265.0387
+    z: 1.0
   }
   rotation {
     x: 0.0
@@ -50,8 +50,8 @@ embedded_instances {
     w: 1.0
   }
   scale3 {
-    x: 1.0
-    y: 1.0
+    x: 0.25
+    y: 0.25
     z: 1.0
   }
 }

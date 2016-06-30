@@ -1,17 +1,21 @@
 name: "default"
 instances {
+  id: "Background"
+  prototype: "/game/game_view/background.go"
+  position {
+    z: -1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
   id: "R1_1"
   prototype: "/game/game_view/R1.go"
   position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
+    x: -635.36993
   }
   scale3 {
     x: 1.0
@@ -22,17 +26,6 @@ instances {
 instances {
   id: "R1_2"
   prototype: "/game/game_view/R1.go"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
   scale3 {
     x: 1.0
     y: 1.0
@@ -42,17 +35,6 @@ instances {
 instances {
   id: "R1_3"
   prototype: "/game/game_view/R1.go"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
   scale3 {
     x: 1.0
     y: 1.0
@@ -62,17 +44,6 @@ instances {
 instances {
   id: "R1_4"
   prototype: "/game/game_view/R1.go"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
   scale3 {
     x: 1.0
     y: 1.0
@@ -82,17 +53,6 @@ instances {
 instances {
   id: "R1_5"
   prototype: "/game/game_view/R1.go"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
   scale3 {
     x: 1.0
     y: 1.0
@@ -103,15 +63,7 @@ instances {
   id: "R2_1"
   prototype: "/game/game_view/R2_1.go"
   position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
+    x: -919.6143
   }
   scale3 {
     x: 1.0
@@ -122,17 +74,6 @@ instances {
 instances {
   id: "R2_2"
   prototype: "/game/game_view/R2_2.go"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
   scale3 {
     x: 1.0
     y: 1.0
@@ -142,17 +83,6 @@ instances {
 instances {
   id: "R2_3"
   prototype: "/game/game_view/R2_3.go"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
   scale3 {
     x: 1.0
     y: 1.0
@@ -162,17 +92,6 @@ instances {
 instances {
   id: "R2_4"
   prototype: "/game/game_view/R2_4.go"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
   scale3 {
     x: 1.0
     y: 1.0
@@ -182,17 +101,6 @@ instances {
 instances {
   id: "R2_5"
   prototype: "/game/game_view/R2_5.go"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
   scale3 {
     x: 1.0
     y: 1.0
@@ -202,17 +110,6 @@ instances {
 instances {
   id: "R3_1"
   prototype: "/game/game_view/R3_1.go"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
   scale3 {
     x: 1.0
     y: 1.0
@@ -222,17 +119,6 @@ instances {
 instances {
   id: "R3_2"
   prototype: "/game/game_view/R3_2.go"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
   scale3 {
     x: 1.0
     y: 1.0
@@ -242,17 +128,6 @@ instances {
 instances {
   id: "R3_3"
   prototype: "/game/game_view/R3_3.go"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
   scale3 {
     x: 1.0
     y: 1.0
@@ -262,17 +137,6 @@ instances {
 instances {
   id: "R3_4"
   prototype: "/game/game_view/R3_4.go"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
   scale3 {
     x: 1.0
     y: 1.0
@@ -282,17 +146,6 @@ instances {
 instances {
   id: "R3_5"
   prototype: "/game/game_view/R3_5.go"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
   scale3 {
     x: 1.0
     y: 1.0
@@ -302,17 +155,6 @@ instances {
 instances {
   id: "R4_1"
   prototype: "/game/game_view/R4_1.go"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
   scale3 {
     x: 1.0
     y: 1.0
@@ -322,17 +164,6 @@ instances {
 instances {
   id: "R4_2"
   prototype: "/game/game_view/R4_2.go"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
   component_properties {
     id: "script"
     properties {
@@ -350,17 +181,6 @@ instances {
 instances {
   id: "R4_3"
   prototype: "/game/game_view/R4_3.go"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
   scale3 {
     x: 1.0
     y: 1.0
@@ -370,17 +190,6 @@ instances {
 instances {
   id: "R5_1"
   prototype: "/game/game_view/R5_1.go"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
   scale3 {
     x: 1.0
     y: 1.0
@@ -390,17 +199,6 @@ instances {
 instances {
   id: "R5_3"
   prototype: "/game/game_view/R5_3.go"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
   scale3 {
     x: 1.0
     y: 1.0
@@ -410,58 +208,6 @@ instances {
 instances {
   id: "view_manager"
   prototype: "/game/game_view/view_manager.go"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
-scale_along_z: 0
-embedded_instances {
-  id: "bg"
-  data: "embedded_components {\n"
-  "  id: \"sprite\"\n"
-  "  type: \"sprite\"\n"
-  "  data: \"tile_set: \\\"/assets/ingame.atlas\\\"\\n"
-  "default_animation: \\\"bg\\\"\\n"
-  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
-  "blend_mode: BLEND_MODE_ALPHA\\n"
-  "\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: -0.8\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "}\n"
-  ""
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
   scale3 {
     x: 1.0
     y: 1.0

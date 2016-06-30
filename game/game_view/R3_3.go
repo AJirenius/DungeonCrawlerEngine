@@ -18,7 +18,7 @@ embedded_components {
   type: "sprite"
   data: "tile_set: \"/assets/ingame.atlas\"\n"
   "default_animation: \"3_front\"\n"
-  "material: \"/builtins/materials/sprite.material\"\n"
+  "material: \"/render/sprite.material\"\n"
   "blend_mode: BLEND_MODE_ALPHA\n"
   ""
   position {
